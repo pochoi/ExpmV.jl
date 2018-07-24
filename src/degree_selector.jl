@@ -1,10 +1,3 @@
-if VERSION < v"0.7-"
-    nothing
-else
-    using LinearAlgebra
-    using SparseArrays
-end
-
 function degree_selector(t, M, U, p)
     C = ceil.(abs.(t)*M)'*U
     C = zero_to_inf.(C)

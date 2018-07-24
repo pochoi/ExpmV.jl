@@ -1,6 +1,3 @@
-using SparseArrays
-using LinearAlgebra
-
 #function  [M,mv,alpha,unA] = ...
 #           select_taylor_degree(A,b,m_max,p_max,precision,shift,bal,force_estm)
 

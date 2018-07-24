@@ -1,5 +1,8 @@
 module ExpmV
-
+  
+  using Compat.LinearAlgebra
+  using Compat.SparseArrays
+  
   # package code goes here
   include("expmv_fun.jl")
   include("degree_selector.jl")
