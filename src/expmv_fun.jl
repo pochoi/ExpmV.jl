@@ -1,5 +1,3 @@
-export expmv
-
 """
     expmv(t, A, b; <keyword arguments>)
 
