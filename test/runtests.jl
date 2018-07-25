@@ -2,7 +2,11 @@ using ExpmV
 using Compat.Test
 using Compat.LinearAlgebra
 using Compat.SparseArrays
-import Compat: exp
+import Compat: range
+
+if VERSION < v"0.7-"
+    exp(A::AbstractMatrix) = expm(A)
+end
 
 @testset "Hermitian: $herm" for herm in [true, false]
     @testset "Size: $d" for d in 10:10:60
