@@ -1,3 +1,7 @@
+if VERSION < v"0.7-"
+    tr(A::AbstractMatrix) = trace(A)
+end
+
 function expmv(t::StepRangeLen, A::SparseMatrixCSC, b::Vector;
                 M = nothing, precision = "double", shift = true)
 
