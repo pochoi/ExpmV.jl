@@ -1,11 +1,12 @@
 using ExpmV
-using Test
-using LinearAlgebra
-using SparseArrays
+using Compat.Test
+using Compat.LinearAlgebra
+using Compat.SparseArrays
+import Compat: exp
 
-@testset "Hermitian: $herm"  for herm in [true, false]
+@testset "Hermitian: $herm" for herm in [true, false]
     @testset "Size: $d" for d in 10:10:60
-        for i = 1:20
+        for i = 1:10
             r = sprandn(d,d,.1)+1im*sprandn(d,d,.1)
             if herm
                 r = (r-r')/2
@@ -38,4 +39,4 @@ using SparseArrays
             end
         end
     end
-end
+end;
