@@ -2,7 +2,7 @@ if VERSION < v"0.7-"
     tr(A::AbstractMatrix) = trace(A)
 end
 
-function expmv(t::StepRangeLen, A::SparseMatrixCSC, b::Vector;
+function expmv(t::StepRangeLen, A::AbstractMatrix, b::AbstractVector;
                 M = nothing, precision = "double", shift = true)
 
     t0 = Float64(t.ref)
